@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+  <h1>STUDENT LOGIN</h1>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form [formGroup]= "LoginForm">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="username" id="username" placeholder="UserName" required="" formControlName="username">
+					<div class="form-text text-dark" *ngIf="UserName.errors?.['required'] && (UserName.touched || UserName.dirty)">
+						UserName  is required.
+					</div>
+					<div class="form-text text-dark" *ngIf="UserName.errors?.['pattern'] && (UserName.touched || UserName.dirty)">
+						UserName should start with an alphabet.
+					</div>
+					<input type="email" id="email" placeholder="Email" required="" formControlName="email">
+					<div class="form-text text-dark" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+						Email is required.
+					</div>
+					<div class="form-text text-dark" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">
+						Email is invalid.
+					</div>
+					<input type="password" id="password" placeholder="Password" required="" formControlName="password">
+					<div class="form-text text-dark" *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">
+						Password is required.
+					</div>
+					<div class="form-text text-dark" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] && (password.touched || password.dirty)">
+						Password should be 6.
+					</div>
+					<button href="/stud">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form [formGroup]= "LoginForm">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" id="email" placeholder="Email" required="" formControlName="email">
+					<div class="form-text text-dark" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">
+						Email is required.
+					</div>
+					<div class="form-text text-dark" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">
+						Email is invalid.
+					</div>
+					<input type="password" id="password" placeholder="Password" required="" formControlName="password">
+					<div class="form-text text-dark" *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">
+						Password is required.
+					</div>
+					<div class="form-text text-dark" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] && (password.touched || password.dirty)">
+						Password should be 6.
+					</div>
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>

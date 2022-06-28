@@ -15,8 +15,8 @@ html {
 }
 .container {
   margin: 0 auto;
-  width: 70rem;
-  height: 30rem;
+  width: 77rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

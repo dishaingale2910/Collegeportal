@@ -1,35 +1,79 @@
-<aside>
-    <a>
-    <svg version="1.1" id="nav-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-      <path id="list-view-icon" d="M462,108.857H50V50h412V108.857z M462,167.714H50v58.857h412V167.714z M462,285.429H50v58.857h412
-     V285.429z M462,403.143H50V462h412V403.143z"/>
-    </svg>
-  </a>
-    <h1>Side Nav</h1>
-    
-    <nav>
-      <ul>
-        <li id="products">Student</li>
-        <li><a href="#">Notice Board</a></li>
-        <li><a href="#">Anti-Ragging Rules</a></li>
-        <li><a href="#">hostels</a></li>
-        <li><a href="#">industary samvad feedback</a></li>
-        <li><a href="#">welfare</a></li>
-        <li><a href="#">library form</a></li>
-      </ul>
-    </nav>
-    
-    <div class="vertical-line"></div>
-  </aside>
-  
-  <header>
-    <h2>Responsive Side Bar Site</h2>
+<div class="header" id="topheader">
+        <section class="header-section">
+          <div class="center-div">
+            <h1 class="font-weight-bold"><u>About IQAC</u></h1>
+          </div>
+        </section>
+      </div><br>
+<div class="container">
+  <header class="header1">
+    <h1 id="title" class="text-center">STUDENT FEEDBACK FORM</h1>
+    <p id="description" class="description text-center">
+      Thank you for taking the time to help us improve!
+    </p>
   </header>
-  
-  <article>
-    <p><b>We supply quality furniture from leading manufacturers such as Kingcombe, Parker & farr, Angraves, Mulberry, Pierre Frey, Zoffany, as well as specialist firms in a range of fields.</b>
-      <br><br>
-      It is also possible to have any piece made to your specific sizes, couple that with the choice of fabric from our collections you are able to get something made for you and tailored to your needs.
-      <br><br>
-      We can also reupholster and rebuild your own furniture, using traditional techniques we make sure the frame, springs, etc are in the best possible condition so you can enjoy your furniture for many more years.</p>
-  </article>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="name-label" for="name"> Last Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your Last name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number">Class</label>
+      <input
+        type="number"
+        name="age"
+        id="number"
+        min="10"
+        max="99"
+        class="form-control"
+        placeholder="Age"
+      />
+    </div>
+
+    <div class="form-group">
+      <p>Message</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your message here..."
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div><br>
+<app-footer></app-footer>

@@ -4,7 +4,7 @@
 		
 			<section class="section1 clearfix">
 				<div class="textcenter">
-					<h1>Contact Us</h1>
+					<span class="shtext">Contact Us</span>
 					<span class="seperator"></span>
 					<h1>Drop Us a Mail</h1>
 				</div>
@@ -25,21 +25,62 @@
 					</div>
 					<div class="sec2contactform">
 						<h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
-						<form (ngSubmit)="storeContact()">
+						<form [formGroup]= "registerForm">
 							<div class="clearfix">
-								<input class="col2 first" type="text" placeholder="FirstName" [(ngModel)]="contact.first">								.first">
-								<input class="col2 last" type="text" placeholder="LastName" [(ngModel)]="contact.last">
-							</div>
+								<div class="row">
+									<div class="col mb-3">
+										<label for="firstname" class="form-label">First Name</label>
+										<input type="text" class="form-control" id="firstname" formControlName="firstname">
+										<div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && (FirstName.touched || FirstName.dirty)">
+											First Name is required.
+										</div>
+										<div class="form-text text-danger" *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">
+											Name should start with an alphabet.
+										</div>
+									</div> &nbsp;&nbsp;&nbsp;
+								<div class="col mb-3">
+									<label for="lastname" class="form-label">last Name</label>
+									<input type="text" class="form-control" id="lastname" formControlName="lastname">
+									<div class="form-text text-danger" *ngIf="LastName.errors?.['required'] && (LastName.touched || LastName.dirty)">
+										Last Name is required.
+									</div>
+									<div class="form-text text-danger" *ngIf="LastName.errors?.['pattern'] && (LastName.touched || LastName.dirty)">
+										Name should start with an alphabet.
+									</div>
+								</div>				</div>			</div>
 							<div class="clearfix">
-								<input  class="col2 first" type="Email" placeholder="Email" [(ngModel)]="contact.email">
-								<input class="col2 last" type="text" placeholder="Contact Number" [(ngModel)]="contact.mobile">
-							</div>
+								<div class="row">
+									<div class="col mb-3">
+										<label for="email" class="form-label">Email</label>
+										<input type="email" class="form-control" id="email" formControlName="email">
+										<div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+											Email is required.
+										</div>
+										<div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+											Email is invalid.
+										</div>
+									</div>&nbsp;&nbsp;&nbsp;
+									<div class="col mb-3">
+										<label for="mobile" class="form-label">Mobile Number</label>
+										<input type="text" class="form-control" id="mobile" formControlName="mobile">
+										<div class="form-text text-danger" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+											Mobile Number is required.
+										</div>
+										<div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched || Mobile.dirty)">
+											Mobile Number is invalid.
+										</div>
+										<div class="form-text text-danger" *ngIf="Mobile.errors?.['minlength'] && (Mobile.touched || Mobile.dirty)">
+											Mobile Number is short.
+										</div>
+										<div class="form-text text-danger" *ngIf="Mobile.errors?.['maxlength'] && (Mobile.touched || Mobile.dirty)">
+											Mobile Number is long.
+										</div>
+									</div></div>
+								</div>
 							<div class="clearfix">
-								<textarea name="textarea" cols="30" rows="7" [(ngModel)]="contact.massage">Your message here...</textarea>
+								<textarea name="textarea" id="" cols="30" rows="7">Your message here...</textarea>
 							</div>
-							<div class="clearfix">
-								<button class="btn btn-dark btn-sm mt-4">Submit</button>
-							</div>
+							<div class="clearfix"><input type="submit" value="Send"></div>
 						</form>
 					</div>
 

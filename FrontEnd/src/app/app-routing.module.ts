@@ -23,6 +23,13 @@ import { LibformComponent } from './components/libform/libform.component';
 import { WelfareComponent } from './components/welfare/welfare.component';
 import { HostelsComponent } from './components/hostels/hostels.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { StudfeedComponent } from './components/studfeed/studfeed.component';
+import { TeachfeedComponent } from './components/teachfeed/teachfeed.component';
+import { StudentloginComponent } from './components/studentlogin/studentlogin.component';
+import { McaComponent } from './components/mca/mca.component';
+import { MbaComponent } from './components/mba/mba.component';
+import { PhdComponent } from './components/phd/phd.component';
 const routes: Routes = [
   { path: 'chme', component:ChmeComponent},
   { path: 'faculty', component:FacultyComponent},
@@ -47,6 +54,13 @@ const routes: Routes = [
   { path: 'welfare', component:WelfareComponent},
   { path: 'hostels', component:HostelsComponent},
   { path: 'contactus', component:ContactusComponent},
+  { path: 'feedback', component:FeedbackComponent},
+  { path: 'studfeed', component:StudfeedComponent},
+  { path: 'teachfeed', component:TeachfeedComponent},
+  { path: 'studentlogin', component:StudentloginComponent},
+  { path: 'mca', component:McaComponent},
+  { path: 'mba', component:MbaComponent},
+  { path: 'phd', component:PhdComponent},
 ];
 
 @NgModule({

@@ -23,9 +23,4 @@ export class DataService {
   getNoticById(id){
     return this.httpClient.get('http://127.0.0.1:8000/api/notic/'+id);
   }
-
-  storeContact(data:any){
-    return this.httpClient.post('http://127.0.0.1:8000/api/storeContact' ,data);
-
-  }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactusService } from 'src/app/contactus.service';
-import { Contactus } from 'src/app/contactus';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contactus',
@@ -9,21 +8,34 @@ import { Contactus } from 'src/app/contactus';
 })
 export class ContactusComponent implements OnInit {
 
-  contact:any;
-  Contacts =new Contactus();
- 
-  constructor( private contcatservice:ContactusService) { }
+  constructor() { }
 
   ngOnInit(): void {
-
-    this.storeContact();
   }
 
-  storeContact(data:any)
-  {
-    this.contcatservice.storeContact(this.Contacts).subscribe(res =>{
-      this.storeContact();
-    })
-  };
+  registerForm = new FormGroup({
+    firstname: new FormControl("", [Validators.required, Validators.pattern("[a-zA-Z].*")]),
+    lastname: new FormControl("", [Validators.required, Validators.pattern("[a-zA-Z].*")]),
+    email: new FormControl("", [Validators.required, Validators.email ]),
+    mobile: new FormControl("", [Validators.required, Validators.pattern("[0-9]*"), Validators.minLength(10), Validators.maxLength(10)]),
+   
+  });
+
+
+
+  get FirstName(): FormControl{
+    return this.registerForm.get("firstname") as FormControl;
+  }
+  get LastName(): FormControl{
+    return this.registerForm.get("lastname") as FormControl;
+  }
+  get Email(): FormControl{
+    return this.registerForm.get("email") as FormControl;
+  }
+  get Mobile(): FormControl{
+    return this.registerForm.get("mobile") as FormControl;
+  }
+
+
 
 }

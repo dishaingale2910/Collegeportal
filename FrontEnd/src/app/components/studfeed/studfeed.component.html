@@ -1,0 +1,76 @@
+<div class="header" id="topheader">
+    <section class="header-section">
+      <div class="center-div">
+        <h1 class="font-weight-bold"><u>STUDENT FEEDBACK FORM</u></h1>
+      </div>
+    </section>
+  </div><br>
+<div class="container">
+<header class="header1">
+<h1 id="title" class="text-center">STUDENT FEEDBACK FORM</h1>
+<p id="description" class="description text-center">
+  Thank you for taking the time to help us improve!
+</p>
+</header>
+<form id="survey-form">
+<div class="form-group">
+  <label id="name-label" for="name">Name</label>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    class="form-control"
+    placeholder="Enter your name"
+    required
+  />
+</div>
+<div class="form-group">
+  <label id="name-label" for="name"> Last Name</label>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    class="form-control"
+    placeholder="Enter your Last name"
+    required
+  />
+</div>
+<div class="form-group">
+  <label id="email-label" for="email">Email</label>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    class="form-control"
+    placeholder="Enter your Email"
+    required
+  />
+</div>
+<div class="form-group">
+  <p>How many of you are dining?</p>
+  <select id="dropdown" name="role" class="form-control" required>
+    <option disabled selected value>Select class</option>
+    <option value="individual">MCA</option>
+    <option value="couple">MBA</option>
+    <option value="smallgroup">PhD</option>
+  </select>
+</div>
+<div class="form-group">
+  <p>Message</p>
+  <textarea
+    id="comments"
+    class="input-textarea"
+    name="comment"
+    placeholder="Enter your message here..."
+  ></textarea>
+</div>
+
+<div class="form-group">
+  <input type="reset" value="Reset">
+  <button type="submit" id="submit" class="submit-button">
+    Submit
+  </button>
+</div>
+</form>
+</div><br>
+<app-footer></app-footer>

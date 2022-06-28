@@ -35,6 +35,15 @@ import { DemodComponent } from './components/demod/demod.component';
 import { HostelsComponent } from './components/hostels/hostels.component';
 import { WelfareComponent } from './components/welfare/welfare.component';
 import { LibformComponent } from './components/libform/libform.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { StudfeedComponent } from './components/studfeed/studfeed.component';
+import { TeachfeedComponent } from './components/teachfeed/teachfeed.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { StudentloginComponent } from './components/studentlogin/studentlogin.component';
+import { McaComponent } from './components/mca/mca.component';
+import { MbaComponent } from './components/mba/mba.component';
+import { PhdComponent } from './components/phd/phd.component';
+
 const appRoutes: Routes = [
   { path: '', component:HomepageComponent},
   
@@ -70,7 +79,14 @@ const appRoutes: Routes = [
     DemodComponent,
     HostelsComponent,
     WelfareComponent,
-    LibformComponent
+    LibformComponent,
+    FeedbackComponent,
+    StudfeedComponent,
+    TeachfeedComponent,
+    StudentloginComponent,
+    McaComponent,
+    MbaComponent,
+    PhdComponent
   
   ],
   imports: [
@@ -78,7 +94,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
